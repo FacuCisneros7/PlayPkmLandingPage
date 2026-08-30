@@ -20,32 +20,39 @@
     </div>
 
     <ul class="nav-links">
-      <li><a href="#minijuegos">Minijuegos</a></li>
-      <li><a href="#ranking">Ranking</a></li>
-      <li><a href="#perfil">Perfil</a></li>
+      <li><a href="#minijuegos">MINIJUEGOS</a></li>
+      <li><a href="#ranking">RANKING</a></li>
+      <li><a href="#perfil">PERFIL</a></li>
     </ul>
 
-    <a href="https://play.google.com/store/apps/details?id=com.electrofire.playpkm&pcampaignid=web_share" class="btn-primary">Descargar</a>
+    <a href="https://play.google.com/store/apps/details?id=com.electrofire.playpkm&pcampaignid=web_share" class="btn-primary">DESCARGAR</a>
   </nav>
 
   <header class="hero">
     <div class="hero-text">
-      <h1>¿Cuanto sabés realmente de Pokémon?</h1>
- 
+      <h1>PLAYPKM</h1>
+
       <p class="lede">
         Desafía tu conocimiento, escala en el ranking mundial y
         convertite en un verdadero maestro pokemon.
       </p>
- 
+
       <div class="hero-ctas">
         
         <a href="https://play.google.com/store/apps/details?id=com.electrofire.playpkm&pcampaignid=web_share" class="btn-primary">
           <img src="Res/logo/playstore.png" alt="PlayStore" class="icono-boton">
-          ¡Descargar ya!
+          DESCARGAR
         </a>
 
-        <a href="#minijuegos" class="btn-ghost">Ver minijuegos</a>
+        <a href="#minijuegos" class="btn-ghost">VER MINIJUEGOS</a>
       </div>
+
+      <div class="rating">
+        <span class="rating-score">4.8</span>
+        <span class="rating-stars">★★★★★</span>
+        <span class="rating-count">+100 opiniones</span>
+      </div>
+
     </div>
 
     <div class="phone">
@@ -59,45 +66,33 @@
   </header>
 
   <section id="minijuegos">
-    <h2>Más que minijuegos, 14 pruebas que pondran a prueba tu conocimiento a diario!</h2>
- 
-    <div class="game-grid">
-      <div class="game-card">
-        <h3>Zoom Game</h3>
-        <p>Adivina al Pokémon a partir de un recorte de su imagen.</p>
-        <img src="Res/zoom.jpg" alt="Zoom Game">
-      </div>
- 
-      <div class="game-card">
-        <h3>Silhouette</h3>
-        <p>Reconoce la silueta del Pokémon ¡Cuidado con el tiempo!</p>
-        <img src="Res/easygame.jpg" alt="Silhouette Game">
-      </div>
- 
-      <div class="game-card">
-        <h3>Blurred Card</h3>
-        <p>¿Podrás reconocer al pokemon detrás de esta carta borrosa?</p>
-        <img src="Res/card.jpg" alt="Blurred Card Game">
-      </div>
- 
-      <div class="game-card">
-        <h3>Types</h3>
-        <p>¿Conoces los tipos de los 1000 Pokémon? ¡Ya lo veremos!</p>
-        <img src="Res/typegame.png" alt="Types Game">
-      </div>
- 
-      <div class="game-card">
-        <h3>Item Mystery</h3>
-        <p>En el mundo Pokémon existen tantos objetos como pokemon. ¿Los reconoces todos?</p>
-        <img src="Res/itemgame.png" alt="Item Game">
+    <h2>¡ENFRENTA LOS 14 MINIJUEGOS!</h2>
+
+    <div class="phone-carousel">
+
+      <div class="phone phone-slide active">
+        <div class="phone-screen">
+          <img src="Res/screenshots/goodchoise.jpg">
+        </div>
       </div>
 
+      <div class="phone phone-slide">
+        <div class="phone-screen">
+          <img src="Res/screenshots/mysterious.jpg">
+        </div>
+      </div>
+
+      <button class="carousel-arrow" id="siguienteMinijuego" aria-label="Siguiente pantalla">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
+          <path d="M9 6 L15 12 L9 18" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
     </div>
-  </section>
 
   <section id="ranking">
     
-    <h2>¡Gana los minijuegos y asciende en los rankings!</h2>
+    <h2>¡GANA LOS MINIJUEGOS Y ASCIENDE EN LOS RANKINGS!</h2>
 
     <div class="ranking-grid">
 
@@ -106,7 +101,7 @@
         <div class="phone">
 
           <div class="phone-screen">
-            <img src="Res/screenshots/Screenshot_20260828-233104.PlayPkm~2.jpg">
+            <img src="Res/screenshots/ranking general.png">
           </div>
 
         </div>
@@ -114,37 +109,26 @@
         <div class="phone">
 
           <div class="phone-screen">
-            <img src="Res/screenshots/Screenshot_20260828-233104.PlayPkm~2.jpg">
+            <img src="Res/screenshots/rankinkg repe.png">
           </div>
         
         </div>
 
       </div>
 
-      <div class="rank-grid">
-
         <div class="rank-card">
-          <span class="rank-cycle">Ranking mensual</span>
-          <h3>Se reinicia el día 1 de cada mes.</h3>
-          <p>Un maratón de un mes completo para escalar posiciones.</p>
-          <span class="rank-coin">+4 monedas por victoria</span>
-        </div>
- 
-        <div class="rank-card">
-         <span class="rank-cycle">Ranking semanal</span>
-         <h3>Se reinicia cada lunes.</h3>
-         <p>Ciclos cortos... Si querés ser el mejor, ¡Cada victoria cuenta!</p>
-         <span class="rank-coin">+3 monedas por victoria</span>
+          <span class="rank-cycle">Ranking semanales</span>
+          <h3>Se reinician cada lunes.</h3>
+          <p>Ciclos cortos... Si querés ser el mejor, ¡Cada victoria cuenta!</p>
+          <span class="rank-coin">+3 monedas por victoria</span>
         </div>
 
-      </div>
-    
     </div>
 
   </section>
 
   <section id="perfil">
-    <h2>Tu perfil, tu vitrina de entrenador</h2>
+    <h2>¡TU PERFIL DE ENTRENADOR!</h2>
  
     <div class="phone">
 
@@ -162,12 +146,12 @@
   <div class="soporte-grid">
 
     <div class="panel">
-       <h3>Soporte total en dos idiomas</h3>
-       <p>Toda la app está disponible en Español e Inglés.</p>
+      <h3>Soporte total en dos idiomas</h3>
+      <p>Toda la app está disponible en Español e Inglés.</p>
     </div>
  
     <div class="panel">
-       <h3>Créditos</h3>
+      <h3>Créditos</h3>
       <p>PLAYPKM existe gracias a PokeAPI y a artistas de la comunidad.</p>
     </div>
 
