@@ -156,7 +156,6 @@ nav {
 .carousel-arrow {
   position: absolute;
   top: 50%;
-  right: -70px;
   transform: translateY(-50%);
   width: 44px;
   height: 44px;
@@ -168,6 +167,14 @@ nav {
   justify-content: center;
   cursor: pointer;
   transition: background-color 0.2s ease;
+}
+
+.carousel-arrow.right {
+  right: -70px;
+}
+
+.carousel-arrow.left {
+  left: -70px;
 }
 
 .carousel-arrow:hover {
@@ -520,5 +527,13 @@ footer {
 
   .quote-row {
     grid-template-columns: 1fr;
+  }
+
+  .carousel-arrow.right {
+    right: -8px;
+  }
+
+  .carousel-arrow.left {
+    left: -8px;
   }
 }
