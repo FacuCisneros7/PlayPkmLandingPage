@@ -64,8 +64,8 @@ nav {
 }
 
 .btn-primary {
-  display: inline-flex; 
-  align-items: center; 
+  display: inline-flex;
+  align-items: center;
   gap: 8px;
   background-color: var(--celeste);
   color: var(--azul-oscuro);
@@ -92,14 +92,14 @@ nav {
 }
 
 .hero h1 {
-  font-size: 80px;
+  font-size: clamp(32px, 6vw, 80px);
   line-height: 1.1;
   margin-bottom: 20px;
 }
 
 .hero .lede {
   color: var(--celeste);
-  font-size: 25px;
+  font-size: clamp(16px, 2.2vw, 25px);
   margin-bottom: 32px;
 }
 
@@ -138,21 +138,21 @@ nav {
   padding: 12px;
   box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
 }
- 
+
 .phone-carousel {
   position: relative;
   display: flex;
   justify-content: center;
 }
- 
+
 .phone-slide {
   display: none;
 }
- 
+
 .phone-slide.active {
   display: block;
 }
- 
+
 .carousel-arrow {
   position: absolute;
   top: 50%;
@@ -169,25 +169,24 @@ nav {
   cursor: pointer;
   transition: background-color 0.2s ease;
 }
- 
+
 .carousel-arrow:hover {
   background-color: var(--celeste-azulado);
 }
- 
+
 .phone-screen {
   background-color: var(--azul-oscuro);
   border-radius: 22px;
   aspect-ratio: 9 / 18.5;
   overflow: hidden;
 }
- 
+
 .phone-screen img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-
 
 .btn-ghost {
   border: 1px solid var(--celeste-azulado);
@@ -240,10 +239,39 @@ nav {
 .rank-card {
   background-color: var(--azul);
   border-radius: 16px;
-  padding: 28px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-self: center;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.rank-card:hover {
+  transform: translateY(-4px);
+}
+
+.rank-card.monthly {
+  background: linear-gradient(160deg, var(--azul), var(--azul-oscuro));
+  border-color: var(--azul);
+}
+
+.rank-card.monthly:hover {
+  border-color: var(--celeste);
+}
+
+.rank-card.weekly {
+  background: linear-gradient(160deg, var(--celeste-azulado), var(--azul-oscuro));
+  border-color: var(--celeste-azulado);
+}
+
+.rank-card.weekly:hover {
+  border-color: var(--celeste);
+}
+
+.rank-icon {
+  font-size: 26px;
+  margin-bottom: 10px;
 }
 
 .rank-cycle {
@@ -251,6 +279,10 @@ nav {
   font-size: 12px;
   color: var(--celeste);
   letter-spacing: 1px;
+}
+
+.rank-card p {
+  margin: 8px 0;
 }
 
 .rank-card h3 {
@@ -353,6 +385,32 @@ nav {
   margin-bottom: 40px;
 }
 
+.support-panel {
+  border-left: 3px solid var(--celeste);
+}
+
+.panel-icon {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.credit-chips {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.chip {
+  background-color: rgba(11, 35, 64, 0.35);
+  color: var(--azul-oscuro);
+  font-size: 12.5px;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 100px;
+}
+
 .quote-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -362,12 +420,54 @@ nav {
 .quote {
   background-color: var(--azul);
   border-radius: 16px;
-  padding: 20px;
+  padding: 24px 20px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.quote::before {
+  content: "\201C";
+  position: absolute;
+  top: -18px;
+  right: 12px;
+  font-size: 90px;
+  font-family: Georgia, serif;
+  color: rgba(255, 255, 255, 0.08);
+  line-height: 1;
+}
+
+.quote-stars {
+  display: block;
+  color: var(--celeste);
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
 .quote p {
-  margin: 0 0 12px 0;
+  margin: 0 0 18px 0;
   font-style: italic;
+  position: relative;
+}
+
+.quote-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quote-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--azul-oscuro);
+  color: var(--celeste);
+  font-weight: bold;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .quote-who {
@@ -384,6 +484,12 @@ footer {
 }
 
 @media (max-width: 700px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
   .hero {
     grid-template-columns: 1fr;
     text-align: center;
@@ -393,8 +499,26 @@ footer {
     justify-content: center;
   }
 
+  .rating {
+    justify-content: center;
+  }
+
   .perfil-layout {
     grid-template-columns: 1fr;
     justify-items: center;
+  }
+
+  .ranking-layout {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 24px;
+  }
+
+  .soporte-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-row {
+    grid-template-columns: 1fr;
   }
 }
